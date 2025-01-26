@@ -1,30 +1,12 @@
-import React from 'react'
+import React from 'react';
 
-interface Todo {
-  userId: number;
-  id: number;
-  title: string;
-  completed: boolean;
-}
-
-const BlockbusterChat = async () => {
-  const res = await fetch('https://jsonplaceholder.typicode.com/todos');
-  const data_list: Todo[] = await res.json()
-
+const WelcomePage: React.FC = () => {
   return (
     <div>
-      <h1 className='font-bold'>Blockbuster Chat</h1>
-      <ul>
-        {data_list.map(todo => (
-          <li key={todo.id}>
-            {todo.id}. {todo.title}.{" "}
-            {todo.completed? "Completed" : "Not Completed"}
-          </li>
-        ))}
-      </ul>
+      <h1 className='font-bold'>Welcome to my website</h1>
+      <p className='mt-4 font-bold'>Click on the Blockbuster Chat V3 link to get started.</p>
     </div>
-  )
+  );
 }
 
-export default BlockbusterChat;
- 
+export default WelcomePage;

@@ -1,10 +1,13 @@
 import React from 'react';
+import Link from 'next/link';
 
 const WelcomePage: React.FC = () => {
   return (
     <div>
       <h1 className='font-bold'>Welcome to my website</h1>
-      <p className='mt-4 font-bold'>Click on the Blockbuster Chat V3 link to get started.</p>
+      <p className='mt-4 font-bold'>
+        Click <Link href="/blockbuster_chat_3" legacyBehavior><a className="text-blue-500 hover:underline">here</a></Link> to get started.
+      </p>
       <p className='mt-4'>
         Follow me on Instagram: 
         <a 
